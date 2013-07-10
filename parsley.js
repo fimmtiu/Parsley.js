@@ -1108,9 +1108,10 @@
       }
 
       var ParsleyField = $( elem ).parsley( this.options );
-      ParsleyField.setParent( this );
-
-      this.items.push( ParsleyField );
+      if (ParsleyField) {
+        ParsleyField.setParent( this );
+        this.items.push( ParsleyField );
+      }
     }
 
     /**
